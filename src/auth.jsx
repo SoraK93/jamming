@@ -18,13 +18,17 @@ const accessToken = async () => {
 
   let body;
   let response;
-  const expireAt = localStorage.getItem("expireAt");
+  const expireAt = sessionStorage.getItem("expireAt");
   const now = Date.now();
   if (now > +expireAt) {
+    try {
     body = await fetch("https://accounts.spotify.com/api/token", payLoad);
     response = await body.json();
-    localStorage.setItem("accessToken", response.access_token);
-    localStorage.setItem("expireAt", now + response.expires_in * 1000);
+    sessionStorage.setItem("accessToken", response.access_token);
+    sessionStorage.setItem("expireAt", now + response.expires_in * 1000);
+    } catch (err) {
+      console.log(err)
+    }
   }
 };
 

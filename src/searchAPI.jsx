@@ -2,7 +2,7 @@ async function searchAPI(query) {
   query = query.replaceAll(" ", "+");
   const endpoint = `https://api.spotify.com/v1/search?q=${query}&type=track`;
 
-  const token = localStorage.getItem("accessToken");
+  const token = sessionStorage.getItem("accessToken");
   const payload = {
     method: "GET",
     headers: {
@@ -12,9 +12,13 @@ async function searchAPI(query) {
 
   let searchResult;
   if (query) {
-    const response = await fetch(endpoint, payload);
-    searchResult = await response.json();
-    return searchResult.tracks.items;
+    try {
+      const response = await fetch(endpoint, payload);
+      searchResult = await response.json();
+      return searchResult.tracks.items;
+    } catch (err) {
+      console.log(err);
+    }
   }
 }
 

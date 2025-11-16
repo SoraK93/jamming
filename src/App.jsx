@@ -1,7 +1,7 @@
 import { accessToken } from "./auth.jsx";
-import { SearchResult } from "./components/SearchResult";
 import { useEffect, useState } from "react";
-import { handleFormSubmit } from "./utilities/handleformSubmit";
+import { Form } from "./components/Form";
+import { Playlist } from "./components/Playlist/index.jsx";
 
 function App() {
   const [tracks, setTracks] = useState([]);
@@ -18,16 +18,8 @@ function App() {
         <h1>JAMMING</h1>
       </header>
       <main>
-        <section>
-          <form onSubmit={(e) => handleFormSubmit(e, userInput, setTracks)}>
-            <SearchResult value={userInput} setUserInput={setUserInput} />
-            <button type="submit">Search</button>
-          </form>
-        </section>
-        <section>
-          <div>Result</div>
-          <div>Playlist</div>
-        </section>
+        <Form userInput={userInput} setUserInput={setUserInput} setTracks={setTracks} />
+        <Playlist tracks={tracks} />
       </main>
       <footer>
         <p>&copy;Codecademy Project</p>

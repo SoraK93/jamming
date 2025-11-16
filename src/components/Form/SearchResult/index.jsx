@@ -1,4 +1,4 @@
-import { handleInputChange } from "../../utilities/handleInputChange";
+import { handleInputChange } from "../../../utilities/handleInputChange";
 import { SearchBar } from "./SearchBar.jsx";
 
 function SearchResult(props) {

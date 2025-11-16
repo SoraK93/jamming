@@ -1,15 +1,19 @@
-import accessToken from "./auth.jsx";
+import { accessToken } from "./spotifyAPI/auth.jsx";
+import { searchAPI } from "./spotifyAPI/searchAPI.jsx";
 import { SearchResult } from "./components/containers/SearchResult.jsx";
-
-// {
-//     "access_token": "BQANYvOmsxjq_r9eQmGR7wEGJHmmdnIzGpN301LfYdlt04169xpsQ-gzvCp0jsrqXsQXOsg0coZEyMJLjU-YiZX3yLg2MZmOnWi2ggJXZh5Kzb-X6FJ-dAiyEl3GAUAc0D4rJ1IqTXc",
-//     "token_type": "Bearer",
-//     "expires_in": 3600
-// }
+import { useEffect, useState } from "react";
 
 function App() {
+  const [tracks, setTracks] = useState();
+  const [userInput, setUserInput] = useState("");
+
+  useEffect(() => {
+    searchAPI(userInput).then(response => setTracks(response))
+  }, [userInput])
+
   accessToken()
 
+  console.log(tracks)
   return (
     <>
       <header>
@@ -17,8 +21,8 @@ function App() {
       </header>
       <main>
         <section>
-          <form>
-            <SearchResult />
+          <form onSubmit={(e) => e.preventDefault()}>
+            <SearchResult value={userInput} setUserInput={setUserInput} />
             <button type="button">Search</button>
           </form>
         </section>

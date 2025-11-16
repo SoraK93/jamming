@@ -1,6 +1,7 @@
-
+import { useState } from "react";
 
 function SearchBar(props) {
+
   return (
     <input
       id="search"

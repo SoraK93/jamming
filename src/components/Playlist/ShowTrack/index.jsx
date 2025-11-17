@@ -1,23 +1,22 @@
 import { Track } from "./Track";
 
-function ShowTrack({ tracks, setSelectedTrack }) {
-  const trackList = tracks.map((song) => {
-    return (
-      <>
-        <li>
-          <div>
-            <h3>{song.name}</h3>
-            <p>{song.artist} | {song.album}</p>
-          </div>
-          <div>
-            <button type="button">+</button>
-          </div>
-        </li>
-      </>
-    );
-  });
+function ShowTrack({ tracks, setSelectedSongs }) {
+  const handleButtonClick = (e) => {
+    const selectedSongId = e.target.id;
+    const song = tracks.find((song) => selectedSongId === song.id);
+    setSelectedSongs((prevSelected) => {
+      const checkSelectedSongs = prevSelected.some(
+        (selected) => selected.id === selectedSongId
+      );
+      if (!checkSelectedSongs) {
+        return [...prevSelected, song];
+      } else {
+        return prevSelected;
+      }
+    });
+  };
 
-  return <Track list={trackList} />;
+  return <Track tracks={tracks} onClick={handleButtonClick} />;
 }
 
 export { ShowTrack };

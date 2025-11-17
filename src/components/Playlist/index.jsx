@@ -7,7 +7,7 @@ function Playlist({ tracks }) {
   return (
     <section>
       <ShowTrack tracks={tracks} setSelectedSongs={setSelectedSongs} />
-      <CreatePlaylist />
+      <CreatePlaylist selectedSongs={selectedSongs} setSelectedSongs={setSelectedSongs} />
     </section>
   );
 }

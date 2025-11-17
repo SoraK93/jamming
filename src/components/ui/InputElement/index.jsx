@@ -1,8 +1,8 @@
-function SearchBar(props) {
+function InputElement(props) {
   return (
     <input
-      id="search"
-      name="search"
+      id={props.name}
+      name={props.name}
       type="text"
       value={props.value}
       onChange={props.onChange}
@@ -10,4 +10,4 @@ function SearchBar(props) {
   );
 }
 
-export { SearchBar };
+export { InputElement };

@@ -1,8 +1,8 @@
-import { handleInputChange } from "../../../utilities/handleInputChange";
-import { SearchBar } from "./SearchBar.jsx";
+import { handleInputChange } from "../../../lib/helper/handleInputChange";
+import { InputElement } from "../../ui/InputElement";
 
 function SearchResult(props) {
-  return <SearchBar value={props.value} onChange={(e) => handleInputChange(e, props)} />;
+  return <InputElement value={props.value} onChange={(e) => handleInputChange(e, props)} />;
 }
 
 export { SearchResult };

@@ -1,12 +1,17 @@
 import { SearchResult } from "./SearchResult";
-import { handleFormSubmit } from "../../utilities/handleFormSubmit";
+import { handleFormSubmit } from "../../lib/helper/handleFormSubmit";
+import { ButtonElement } from "../ui/ButtonElement";
 
 function Form({ userInput, setUserInput, setTracks }) {
   return (
     <section>
       <form onSubmit={(e) => handleFormSubmit(e, userInput, setTracks)}>
-        <SearchResult value={userInput} setUserInput={setUserInput} />
-        <button type="submit">Search</button>
+        <SearchResult
+          name="search"
+          value={userInput}
+          setUserInput={setUserInput}
+        />
+        <ButtonElement text="Search" type="submit" />
       </form>
     </section>
   );

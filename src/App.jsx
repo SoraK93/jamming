@@ -1,4 +1,4 @@
-import { accessToken } from "./auth.jsx";
+import { accessToken } from "./lib/auth/auth.jsx";
 import { useEffect, useState } from "react";
 import { Form } from "./components/Form";
 import { Playlist } from "./components/Playlist/index.jsx";
@@ -11,7 +11,6 @@ function App() {
     accessToken();
   }, []);
 
-  console.log(tracks);
   return (
     <>
       <header>

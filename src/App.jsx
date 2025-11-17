@@ -1,14 +1,14 @@
-import { accessToken } from "./lib/auth/auth.jsx";
+import { accessToken } from "./lib/auth/spotify.jsx";
 import { useEffect, useState } from "react";
 import { Form } from "./components/Form";
 import { Playlist } from "./components/Playlist/index.jsx";
+import "./App.module.css"
 
 function App() {
   const [tracks, setTracks] = useState([]);
-  const [userInput, setUserInput] = useState("");
 
   useEffect(() => {
-    accessToken();
+    accessToken()
   }, []);
 
   return (
@@ -17,11 +17,11 @@ function App() {
         <h1>JAMMING</h1>
       </header>
       <main>
-        <Form userInput={userInput} setUserInput={setUserInput} setTracks={setTracks} />
+        <Form setTracks={setTracks} />
         <Playlist tracks={tracks} />
       </main>
       <footer>
-        <p>&copy;Codecademy Project</p>
+        <p>&copy; Codecademy Project</p>
       </footer>
     </>
   );

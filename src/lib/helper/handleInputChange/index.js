@@ -1,6 +1,6 @@
-const handleInputChange = (e, props) => {
+const handleInputChange = (e, setUserInput) => {
   e.preventDefault();
-  props.setUserInput(e.target.value);
+  setUserInput(e.target.value);
 };
 
 export { handleInputChange }

@@ -1,22 +1,11 @@
-import { searchAPI } from "../../auth/searchAPI";
-
-const handleFormSubmit = async (e, input, tracks) => {
+const handleFormSubmit = async (e, input, setFunc, callbackAPI) => {
   e.preventDefault();
   try {
-    let response = await searchAPI(input);
-    let data = await response.map((song) => {
-      return {
-        id: song.id,
-        name: song.name,
-        album: song.album.name,
-        artist: song.artists[0].name,
-        uri: song.uri,
-      };
-    });
-    tracks(data);
+    let data = await callbackAPI(input);
+    setFunc(data);
   } catch (err) {
     console.log(err);
-    tracks([]);
+    setFunc([]);
   }
 };
 

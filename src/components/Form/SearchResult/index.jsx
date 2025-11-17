@@ -1,8 +1,8 @@
 import { handleInputChange } from "../../../lib/helper/handleInputChange";
 import { InputElement } from "../../ui/InputElement";
 
-function SearchResult(props) {
-  return <InputElement value={props.value} onChange={(e) => handleInputChange(e, props)} />;
+function SearchResult({ name, userInput, setUserInput }) {
+  return <InputElement name={name} value={userInput} onChange={(e) => handleInputChange(e, setUserInput)} />;
 }
 
 export { SearchResult };

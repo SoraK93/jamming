@@ -15,7 +15,16 @@ async function searchAPI(query) {
     try {
       const response = await fetch(endpoint, payload);
       searchResult = await response.json();
-      return searchResult.tracks.items;
+      let data = await searchResult.tracks.items.map((song) => {
+        return {
+          id: song.id,
+          name: song.name,
+          album: song.album.name,
+          artist: song.artists[0].name,
+          uri: song.uri,
+        };
+      });
+      return data;
     } catch (err) {
       console.log(err);
     }

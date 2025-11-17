@@ -1,17 +1,23 @@
 import { SearchResult } from "./SearchResult";
 import { handleFormSubmit } from "../../lib/helper/handleFormSubmit";
 import { ButtonElement } from "../ui/ButtonElement";
+import { useState } from "react";
+import { searchAPI } from "../../lib/helper/spotifyAPI/searchAPI"
 
-function Form({ userInput, setUserInput, setTracks }) {
+function Form({ setTracks }) {
+  const [userInput, setUserInput] = useState("");
+
   return (
     <section>
-      <form onSubmit={(e) => handleFormSubmit(e, userInput, setTracks)}>
+      <form
+        onSubmit={(e) => handleFormSubmit(e, userInput, setTracks, searchAPI)}
+      >
         <SearchResult
           name="search"
-          value={userInput}
+          userInput={userInput}
           setUserInput={setUserInput}
         />
-        <ButtonElement text="Search" type="submit" />
+        <ButtonElement text="SEARCH" type="submit" />
       </form>
     </section>
   );

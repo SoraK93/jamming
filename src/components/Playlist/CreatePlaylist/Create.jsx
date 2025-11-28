@@ -3,6 +3,7 @@ import { InputElement } from "../../ui/InputElement";
 import { SongList } from "./SongList";
 import { handleInputChange } from "../../../lib/helper/handleInputChange";
 import style from "../ShowTrack/index.module.css"
+import style from "./index.module.css"
 
 function Create({ userInput, setUserInput, selectedSongs, setSelectedSongs }) {
   return (

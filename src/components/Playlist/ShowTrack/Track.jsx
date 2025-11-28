@@ -10,7 +10,7 @@ function Track({ tracks, onClick }) {
             {song.artist} | {song.album}
           </p>
         </div>
-        <div className={style.addButton}>
+        <div className={style.button}>
           <button type="button" id={song.id} onClick={onClick}>
             +
           </button>

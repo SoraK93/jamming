@@ -1,3 +1,5 @@
+
+
 function SongList({ selectedSongs, setSelectedSongs }) {
   const handleButtonClick = (e) => {
     const removeSongId = e.target.id;
@@ -9,7 +11,7 @@ function SongList({ selectedSongs, setSelectedSongs }) {
   const selectedList = selectedSongs?.map((song) => {
     return (
       <li key={song.id}>
-        <div>
+        <div className={style.songDetail}>
           <h3>{song.name}</h3>
           <p>
             {song.artist} | {song.album}

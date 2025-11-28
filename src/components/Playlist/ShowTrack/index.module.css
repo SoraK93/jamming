@@ -1,7 +1,11 @@
 .showTrack {
   height: 95%;
-  overflow: auto;
+  overflow-y: auto;
   background-color: var(--dark-violet-opacity);
+}
+
+.showTrack::-webkit-scrollbar {
+  background-color: transparent;
 }
 
 .showTrack ul li {

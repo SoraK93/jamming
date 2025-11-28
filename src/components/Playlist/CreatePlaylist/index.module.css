@@ -19,8 +19,12 @@
 }
 
 .list > div {
-  overflow: scroll;
+  overflow-y: scroll;
 }
+
+/* .list > div::-webkit-scrollbar {
+  display: none;
+} */
 
 .list > button {
   height: 50px;

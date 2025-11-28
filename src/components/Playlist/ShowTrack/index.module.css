@@ -3,7 +3,7 @@
 }
 
 .showTrack ul {
-  overflow: scroll;
+  overflow: auto;
 }
 
 .showTrack ul li {

@@ -4,13 +4,13 @@ function Track({ tracks, onClick }) {
   const trackList = tracks.map((song) => {
     return (
       <li key={song.id}>
-        <div className="songDetail">
+        <div className={style.songDetail}>
           <h3>{song.name}</h3>
           <p>
             {song.artist} | {song.album}
           </p>
         </div>
-        <div className="addButton">
+        <div className={style.addButton}>
           <button type="button" id={song.id} onClick={onClick}>
             +
           </button>
@@ -20,7 +20,7 @@ function Track({ tracks, onClick }) {
   });
 
   return (
-    <div className="showTrack">
+    <div className={style.showTrack}>
       <ul>{trackList}</ul>
     </div>
   );

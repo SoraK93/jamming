@@ -1,0 +1,14 @@
+.showTrack {
+  height: 100%;
+}
+
+.showTrack ul {
+  overflow: scroll;
+}
+
+.showTrack ul li {
+  list-style-type: none;
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: space-between;
+}

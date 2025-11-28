@@ -15,7 +15,12 @@
 
 .showTrack div {
   height: 100%;
-  &p {
+}
+
+.showTrack div p {
+  p {
+    white-space: nowrap;
+    overflow: hidden;
     text-overflow: ellipsis;
   }
 }

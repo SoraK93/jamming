@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { CreatePlaylist } from "./CreatePlaylist";
 import { ShowTrack } from "./ShowTrack";
+import "./index.module.css";
 
 function Playlist({ tracks }) {
   const [selectedSongs, setSelectedSongs] = useState([]);

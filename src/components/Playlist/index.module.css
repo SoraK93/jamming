@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 10em;
-  color: white;
+  color: var(--white);
   margin: 0 10em;
   height: 550px;
 }

@@ -1,3 +1,7 @@
+section {
+  padding: 5em;
+}
+
 form {
   display: flex;
   flex-direction: column;

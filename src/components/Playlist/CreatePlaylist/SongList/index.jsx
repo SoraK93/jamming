@@ -1,4 +1,4 @@
-
+import style from "../../ShowTrack/index.module.css"
 
 function SongList({ selectedSongs, setSelectedSongs }) {
   const handleButtonClick = (e) => {
@@ -17,7 +17,7 @@ function SongList({ selectedSongs, setSelectedSongs }) {
             {song.artist} | {song.album}
           </p>
         </div>
-        <div>
+        <div className={style.button}>
           <button type="button" id={song.id} onClick={handleButtonClick}>
             -
           </button>

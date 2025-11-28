@@ -26,7 +26,11 @@ function SongList({ selectedSongs, setSelectedSongs }) {
     );
   });
 
-  return <List list={selectedList} />
+  return (
+    <div>
+      <ul>{selectedList}</ul>
+    </div>
+  )
 }
 
 export { SongList };

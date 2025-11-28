@@ -6,7 +6,7 @@
 .list > input,
 .list > button {
   width: 90%;
-  margin: 1em 0;
+  margin: 0.5em 0;
   align-self: center;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .list > button {
-  height: 30px;
+  height: 50px;
   font-size: 1.5rem;
   font-weight: 700;
   border-radius: 10px;

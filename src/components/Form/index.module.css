@@ -1,8 +1,8 @@
-section {
+.formSection {
   padding: 5em;
 }
 
-form {
+.formSection form {
   display: flex;
   flex-direction: column;
   justify-content: center;

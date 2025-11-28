@@ -9,7 +9,7 @@ function Form({ setTracks }) {
   const [userInput, setUserInput] = useState("");
 
   return (
-    <section>
+    <section className="formSection">
       <form
         onSubmit={(e) => handleFormSubmit(e, userInput, setTracks, searchAPI)}
       >

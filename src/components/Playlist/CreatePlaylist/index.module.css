@@ -11,9 +11,10 @@
 }
 
 .list > input {
-  background-color: var(--dark-violet-opacity);
+  background-color: transparent;
   color: var(--white);
   padding-left: 1em;
+  border-bottom: 1px solid var(--white);
 }
 
 .list > button {

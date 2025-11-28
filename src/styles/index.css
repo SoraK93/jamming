@@ -36,3 +36,7 @@ header, footer {
 main {
   height: calc(100vh - 60px - 60px);
 }
+
+button {
+  cursor: pointer;
+}

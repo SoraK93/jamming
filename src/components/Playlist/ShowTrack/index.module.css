@@ -1,14 +1,20 @@
 .showTrack {
   height: 100%;
-}
-
-.showTrack ul {
   overflow: auto;
+  background-color: var(--dark-violet-opacity);
 }
 
 .showTrack ul li {
   list-style-type: none;
   font-size: 1.8rem;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 90% auto;
+  margin: 0.5em;
+}
+
+.addButton button {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  font-weight: 700;
 }

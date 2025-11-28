@@ -3,6 +3,7 @@
 :root {
   --font-family: Delius;
   --dark-violet: rgb(74, 3, 88);
+  --dark-violet-opacity: rgba(74, 3, 88, 0.750);
 }
 *,
 *::after,

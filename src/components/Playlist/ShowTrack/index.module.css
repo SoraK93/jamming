@@ -9,6 +9,8 @@
   font-size: 1.8rem;
   display: grid;
   grid-template-columns: 90% auto;
+  height: 50px;
+  text-overflow: ellipsis;
   margin: 0.5em;
 }
 

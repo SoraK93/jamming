@@ -11,6 +11,7 @@ function Form({ setTracks }) {
   return (
     <section className="formSection">
       <form
+        className="form"
         onSubmit={(e) => handleFormSubmit(e, userInput, setTracks, searchAPI)}
       >
         <SearchResult

@@ -2,20 +2,20 @@
   padding: 5em;
 }
 
-.formSection form {
+.formSection .form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-form button, input {
+.form button, input {
   height: 2em;
   border-radius: 10px;
   font-size: 2rem;
 }
 
-form button {
+.form button {
   width: 10em;
   margin: 0.5em;
 }

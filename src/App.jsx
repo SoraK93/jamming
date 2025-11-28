@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <header>
-        <h1>JAMMING</h1>
+        <h1>JAMMMING</h1>
       </header>
       <main>
         <Form setTracks={setTracks} />

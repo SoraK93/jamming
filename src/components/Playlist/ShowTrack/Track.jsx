@@ -1,3 +1,5 @@
+import style from "./index.module.css"
+
 function Track({ tracks, onClick }) {
   const trackList = tracks.map((song) => {
     return (

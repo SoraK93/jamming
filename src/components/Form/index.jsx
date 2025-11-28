@@ -3,15 +3,15 @@ import { handleFormSubmit } from "../../lib/helper/handleFormSubmit";
 import { ButtonElement } from "../ui/ButtonElement";
 import { useState } from "react";
 import { searchAPI } from "../../lib/helper/spotifyAPI/searchAPI"
-import "./index.module.css"
+import style from "./index.module.css"
 
 function Form({ setTracks }) {
   const [userInput, setUserInput] = useState("");
 
   return (
-    <section className="formSection">
+    <section className={style.formSection}>
       <form
-        className="form"
+        className={style.form}
         onSubmit={(e) => handleFormSubmit(e, userInput, setTracks, searchAPI)}
       >
         <SearchResult

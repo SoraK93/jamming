@@ -18,7 +18,7 @@
   display: grid;
   grid-template-columns: 90% auto;
   height: 50px;
-  margin: 0.5em;
+  margin: 1em;
 }
 
 .songDetail {

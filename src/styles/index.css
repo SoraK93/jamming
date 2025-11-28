@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Delius&display=swap');
+
+:root {
+  --font-family: Delius;
+  --dark-violet: rgb(74, 3, 88);
+}
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: var(--font-family);
+}
+
+body {
+  background-image: url("../assets/bg-texture.jpg");
+}
+
+header, footer {
+  height: 60px;
+  color: rgb(236, 210, 236);
+  background-color: var(--dark-violet);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  height: calc(100vh - 60px - 60px);
+}

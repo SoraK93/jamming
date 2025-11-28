@@ -8,6 +8,10 @@
   background-color: transparent;
 }
 
+.showTrack::-webkit-scrollbar-thumb {
+  background-color: white;
+}
+
 .showTrack ul li {
   list-style-type: none;
   font-size: 1.8rem;

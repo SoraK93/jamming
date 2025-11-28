@@ -22,9 +22,13 @@
   overflow-y: scroll;
 }
 
-/* .list > div::-webkit-scrollbar {
-  display: none;
-} */
+.list > div::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.list > div::-webkit-scrollbar-thumb {
+  background-color: white;
+}
 
 .list > button {
   height: 50px;

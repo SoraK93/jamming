@@ -6,7 +6,7 @@ import "./index.module.css";
 function Playlist({ tracks }) {
   const [selectedSongs, setSelectedSongs] = useState([]);
   return (
-    <section>
+    <section className="playList">
       <ShowTrack tracks={tracks} setSelectedSongs={setSelectedSongs} />
       <CreatePlaylist selectedSongs={selectedSongs} setSelectedSongs={setSelectedSongs} />
     </section>

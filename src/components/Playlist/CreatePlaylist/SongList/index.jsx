@@ -1,5 +1,3 @@
-import { List } from "./list";
-
 function SongList({ selectedSongs, setSelectedSongs }) {
   const handleButtonClick = (e) => {
     const removeSongId = e.target.id;

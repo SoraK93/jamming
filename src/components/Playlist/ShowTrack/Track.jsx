@@ -2,7 +2,7 @@ function Track({ tracks, onClick }) {
   const trackList = tracks.map((song) => {
     return (
       <li key={song.id}>
-        <div>
+        <div className="">
           <h3>{song.name}</h3>
           <p>
             {song.artist} | {song.album}
@@ -18,7 +18,7 @@ function Track({ tracks, onClick }) {
   });
 
   return (
-    <div>
+    <div className="showTrack">
       <ul>{trackList}</ul>
     </div>
   );
